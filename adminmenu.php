@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="css/body.css">
     <title>Document</title>
 </head>
 
@@ -28,8 +29,8 @@
 
 
                     <li class="nav-item ">
-                        <a class="nav-link" href=" #">
-                            ปฏิทิน
+                        <a class="nav-link" href="calendar.php">
+                            ค้นหาห้องประชุม
                         </a>
 
                     </li>
@@ -42,15 +43,11 @@
                     </li>
 
 
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            จัดการห้องประชุม
-                        </a>
-                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <a class="dropdown-item" href="#">แก้ไขอุปกรณ์ห้องประชุม</a>
-                            <a class="dropdown-item" href="addroom.php">เพิ่มห้องประชุม</a>
-                        </div>
 
+                    <li class="nav-item ">
+                        <a class="nav-link" href="addroom.php">
+                            เพิ่มห้องประชุม
+                        </a>
                     </li>
 
                 </ul>

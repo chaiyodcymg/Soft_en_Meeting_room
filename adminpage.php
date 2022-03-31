@@ -15,12 +15,14 @@
 
 </head>
 
-<body>
+<body style="overflow-y: hidden;">
   <?php include("adminmenu.php") ?>
 
-  <div>
-    <img src="img/meeting.png" class="center-block img-fluid" alt="Responsive image">
-  </div>
+  <div id="title">
+		<img src="https://wallpaperaccess.com/full/4012588.jpg" class="center-block img-fluid" id="title_img" alt="Responsive image" style="height:90vh">
+		<div id="title_title">Admin ห้องประชุม</div>
+	</div>
+
 
 
 

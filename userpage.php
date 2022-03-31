@@ -12,12 +12,13 @@ session_start();
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/body.css">
     <title>ระบบจองห้องประชุม</title>
 
 
 </head>
 
-<body>
+<body style="overflow-y:hidden">
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container">
             <!-- Just an image -->
@@ -31,27 +32,24 @@ session_start();
                 <span class="navbar-toggler-icon"></span>
             </button>
 
-            <form class="d-flex">
-                <input class="form-control me-2 mr-2" type="search" placeholder="ค้นหาการประชุม" aria-label="Search">
-                <button class="btn btn-outline-info" type="submit">ค้นหา</button>
-            </form>
+
 
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav ml-auto">
 
 
                     <li class="nav-item ">
-                        <a class="nav-link href=" #">
-                            ปฏิทิน
+                        <a class="nav-link" href="usersearch.php">
+                            ค้นหาห้องประชุม
                         </a>
 
                     </li>
 
-
                     <li class="nav-item ">
-                        <a class="nav-link" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <a class="nav-link" href="useraddmeet.php">
                             จองห้องประชุม
                         </a>
+
                     </li>
 
                 </ul>
@@ -76,8 +74,9 @@ session_start();
             </div>
         </div>
     </nav>
-    <div>
-        <img src="img/meeting.png" class="center-block img-fluid" alt="Responsive image">
+    <div id="title">
+        <img src="https://wallpaperaccess.com/full/4012588.jpg" class="center-block img-fluid" id="title_img" alt="Responsive image" style="height:100vh">
+        <div id="title_title">ระบบจองห้องประชุม</div>
     </div>
 
 

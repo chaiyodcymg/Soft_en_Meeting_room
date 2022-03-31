@@ -8,12 +8,13 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/body.css">
     <title>ระบบจองห้องประชุม</title>
-    <div class="p">ปีโป้แกะง่ายอร่อยงิ้</div>
+  
     
 
   </head>
-  <body>
+  <body style="overflow-y:hidden">
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
       <div class="container">
   <!-- Just an image  OK-->
@@ -37,9 +38,11 @@
   </div>
   </div>
 </nav>
-<div>
-  <img src="img/meeting.png" class="center-block img-fluid" alt="Responsive image">
-</div>
+
+<div id="title">
+		<img src="https://wallpaperaccess.com/full/4012588.jpg" class="center-block img-fluid" id="title_img" alt="Responsive image" style="height:100vh">
+		<div id="title_title">ระบบจองห้องประชุม</div>
+	</div>
 
 
 
