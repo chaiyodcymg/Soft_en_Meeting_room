@@ -5,6 +5,7 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/body.css">
     <title>ระบบจองห้องประชุม</title>
     <!-- Custom CSS -->
     <style>

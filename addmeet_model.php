@@ -24,20 +24,25 @@ $meetfilelocation = $fileDes;
 
 
 
-$result = mysqli_query($conn, "SELECT *  FROM events  WHERE  roomid='$roomid' AND ('$start' BETWEEN  start AND end  OR '$end' BETWEEN  start AND end 
-OR  start BETWEEN  '$start' AND ' $end ' OR  end BETWEEN  '$start' AND '$end' )UNION  SELECT * FROM events  WHERE roomid<>'$roomid' AND ('$start' BETWEEN  start AND end  OR '$end' BETWEEN  start AND end 
-OR  start BETWEEN  '$start' AND ' $end ' OR  end BETWEEN  '$start' AND '$end' ) AND head = '$head'");
+$result = mysqli_query(
+	$conn,
+	"SELECT *  FROM events  WHERE  roomid='$roomid' AND ('$start' BETWEEN  start AND end  OR '$end' BETWEEN  start AND end 
+OR  start BETWEEN  '$start' AND ' $end ' OR  end BETWEEN  '$start' AND '$end' )
+
+UNION  
+
+	SELECT * FROM events  WHERE roomid<>'$roomid' AND ('$start' BETWEEN  start AND end  OR '$end' BETWEEN  start AND end 
+OR  start BETWEEN  '$start' AND ' $end ' OR  end BETWEEN  '$start' AND '$end' ) AND head = '$head'"
+);
 
 
-if (mysqli_num_rows($result) > 0 ) {
-
+if (mysqli_num_rows($result) > 0) {
 	echo "<script>alert('ห้องประชุมนี้ มีการจองในเวลานี้แล้ว')</script>";
 	echo "<script>window.open('addmeet.php','_self')</script>";
 } else {
 
 	mysqli_query($conn, "insert into events (title, head, numattend, listname, roomid, start, end, addequipment, remark, meetfile) values 
 	( '$title','$head','$numattend','$listname','$roomid','$start','$end','$addequipment','$remark','$meetfilelocation')");
-	header('location:addmeet.php');		
-
+	header('location:addmeet.php');
 }
 // 
