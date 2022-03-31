@@ -1,3 +1,6 @@
+<?php
+
+?>
 <!doctype html>
 <html lang="en">
 
@@ -54,8 +57,9 @@
                 <div class="ml-md-2 my-lg-0">
 
                     <?php
-                    session_start();
+
                     //check session 
+                    session_start();
                     if (isset($_SESSION['user'])) {
                         echo "<p style='color:white'>ยินดีต้อนรับ ";
                         echo $_SESSION['user'];

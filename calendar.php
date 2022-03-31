@@ -46,11 +46,13 @@
 		} else if (!empty($_POST['searchroom']) && empty($_POST['searchhead'])) {
 			$searchroom = $_POST['searchroom'];
 			$sql = "SELECT * FROM events where roomid = '$searchroom';";
-		} else  if (empty($_POST['searchroom']) && empty($_POST['searchhead'])) {
+		} 
+		else  if (!empty($_POST['searchroom']) && !empty($_POST['searchhead'])) {
 			$searchhead = $_POST['searchhead'];
 			$searchroom = $_POST['searchroom'];
-			$sql = "SELECT * FROM events where head = '$searchhead' && roomid = '$searchroom'";
-		} else {
+			$sql = "SELECT * FROM events where head = '$searchhead' AND roomid = '$searchroom'";
+		} 
+		else {
 			$sql = "SELECT * FROM events";
 		}
 	} else {
@@ -119,8 +121,23 @@
 				<h1>ตารางการใช้งานห้องประชุม</h1>
 				<p class="lead">
 					<?php
+					include("conn.php");
 					if (isset($_POST['searchhead']) || isset($_POST['searchroom'])) {
-						echo "ประธานชื่อ " . $_POST['searchhead'] . "  ห้องประชุม  " . $_POST['searchroom'];
+						if (empty($_POST['searchhead']) &&  !empty($_POST['searchroom'])) {
+							$roomid = $_POST['searchroom'];
+							$room = mysqli_query($conn, "SELECT roomname FROM room WHERE roomid = '$roomid'");
+							$rowroom = mysqli_fetch_array($room);
+							echo "ประธานทั้งหมด  ห้องประชุม  | " . $rowroom['roomname'];
+						} else if (!empty($_POST['searchhead']) &&  empty($_POST['searchroom'])) {
+							echo "ประธานชื่อ " . $_POST['searchhead'] . " |  ห้องประชุมทั้งหมด  ";
+						} else if (empty($_POST['searchhead']) &&  empty($_POST['searchroom']))
+							echo "ประธานทั้งหมด | ห้องประชุมทั้งหมด  ";
+						else {
+							$roomid = $_POST['searchroom'];
+							$room = mysqli_query($conn, "SELECT roomname FROM room WHERE roomid = '$roomid'");
+							$rowroom = mysqli_fetch_array($room);
+							echo "ประธานชื่อ " . $_POST['searchhead'] . " |  ห้องประชุม  " . $rowroom['roomname'];
+						}
 					}
 
 					?>

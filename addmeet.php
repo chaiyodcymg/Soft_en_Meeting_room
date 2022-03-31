@@ -46,6 +46,7 @@
 					include('conn.php');
 
 					$query = mysqli_query($conn, "select * from events");
+
 					while ($row = mysqli_fetch_array($query)) {
 					?>
 						<tr>
@@ -55,7 +56,11 @@
 							<td><?php echo $row['numattend']; ?></td>
 							<td><?php echo $row['listname']; ?></td>
 
-							<td><?php echo $row['roomid']; ?></td>
+							<td><?php $roomid = $row['roomid'];
+								$room = mysqli_query($conn, "SELECT roomname FROM room WHERE roomid = '$roomid'");
+								$rowroom = mysqli_fetch_array($room);
+								echo $rowroom['roomname'];
+								?></td>
 
 							<td><?php echo $row['start']; ?></td>
 							<td><?php echo $row['end']; ?></td>
@@ -63,8 +68,8 @@
 							<td><?php echo $row['remark']; ?></td>
 							<td><a href="<?php echo $row['meetfile']; ?>">ดูไฟล์</a></td>
 							<td><a href="#edit<?php echo $row['id']; ?>" data-toggle="modal" class="btn btn-warning"><span class="glyphicon glyphicon-edit"></span> Edit</a>
-							<a href="#del<?php echo $row['id']; ?>" data-toggle="modal" class="btn btn-danger"><span class="glyphicon glyphicon-trash"></span> Delete</a>
-							<?php include('meetaction.php'); ?>
+								<a href="#del<?php echo $row['id']; ?>" data-toggle="modal" class="btn btn-danger"><span class="glyphicon glyphicon-trash"></span> Delete</a>
+								<?php include('meetaction.php'); ?>
 							</td>
 						</tr>
 					<?php

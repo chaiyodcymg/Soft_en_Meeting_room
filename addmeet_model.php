@@ -1,4 +1,5 @@
 <?php
+
 include('conn.php');
 
 
@@ -43,6 +44,13 @@ if (mysqli_num_rows($result) > 0) {
 
 	mysqli_query($conn, "insert into events (title, head, numattend, listname, roomid, start, end, addequipment, remark, meetfile) values 
 	( '$title','$head','$numattend','$listname','$roomid','$start','$end','$addequipment','$remark','$meetfilelocation')");
-	header('location:addmeet.php');
+	session_start();
+
+
+	if ($_SESSION['type'] == "01") {
+		header("location:addmeet.php");
+	} else {
+		header("location:useraddmeet.php");
+	}
 }
 // 
