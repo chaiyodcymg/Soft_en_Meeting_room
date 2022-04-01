@@ -12,7 +12,7 @@ $start = $_POST['start'];
 $end = $_POST['end'];
 $addequipment = $_POST['addequipment'];
 $remark = $_POST['remark'];
-
+$color = $_POST['color'];
 $file = $_FILES['meetfile'];
 $filename = $_FILES["meetfile"]["name"];
 $filTmpename = $_FILES["meetfile"]["tmp_name"];
@@ -42,8 +42,8 @@ if (mysqli_num_rows($result) > 0) {
 	echo "<script>window.open('addmeet.php','_self')</script>";
 } else {
 
-	mysqli_query($conn, "insert into events (title, head, numattend, listname, roomid, start, end, addequipment, remark, meetfile) values 
-	( '$title','$head','$numattend','$listname','$roomid','$start','$end','$addequipment','$remark','$meetfilelocation')");
+	mysqli_query($conn, "insert into events (title, head, numattend, listname, roomid, start, end, addequipment, remark, meetfile,color) values 
+	( '$title','$head','$numattend','$listname','$roomid','$start','$end','$addequipment','$remark','$meetfilelocation', '$color')");
 	session_start();
 
 

@@ -10,7 +10,7 @@
 	$end=$_POST['end'];
 	$addequipment=$_POST['addequipment'];
 	$remark=$_POST['remark'];
-	
+	$color=$_POST['color'];
 	$file=$_FILES['meetfile'];
 	$filename=$_FILES["meetfile"]["name"];
 	$filTmpename= $_FILES["meetfile"]["tmp_name"];
@@ -22,7 +22,7 @@
 	$meetfilelocation=$fileDes;
 	
 	mysqli_query($conn,"update events set title=
-	'$title', head='$head', numattend='$numattend', listname='$listname', roomid='$roomid', start='$start', end='$end', addequipment='$addequipment', remark='$remark',  meetfile='$meetfilelocation' where id='$id'");
+	'$title', head='$head', numattend='$numattend', listname='$listname', roomid='$roomid', start='$start', end='$end', addequipment='$addequipment', remark='$remark',  meetfile='$meetfilelocation' , color='$color' where id='$id'");
 	if ($_SESSION['type'] == "01") {
 		header("location:addmeet.php");
 	} else {

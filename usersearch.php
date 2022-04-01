@@ -17,6 +17,7 @@
             float: none;
             margin: 0 auto;
         }
+
     </style>
 </head>
 
@@ -75,14 +76,15 @@
                     }
                     ?>
 
-                    <a href="logout.php" class="btn btn-primary" role="button">ออกจากระบบ</a>
+                    <a href="logout.php" class="btn btn-info" role="button">ออกจากระบบ</a>
                 </div>
 
             </div>
         </div>
     </nav>
     <div id="title">
-        <img src="https://wallpaperaccess.com/full/4012588.jpg" class="center-block img-fluid" id="title_img" alt="Responsive image">
+        <img src="img/1.jpg" class="center-block img-fluid" id="title_img" alt="Responsive image">
+        <div id="back_2"></div>
         <div id="title_title">ห้องประชุม</div>
     </div>
     <div style="height:5vw"></div>
@@ -157,13 +159,13 @@
                         ?>
                     </select>
                 </th>
-                <th><span style="font-size:20px; color:white;">
-                        <center><strong>คลิ๊ก </strong></center>
-                    </span> <button type="submit" class="btn btn-primary">ค้นหา</button> </th>
+                <th><br> <button type="submit" class="btn btn-info">ค้นหา</button> </th>
 
             </tr>
         </table>
     </center>
+    <hr style="margin:30px;">
+
 
 
 

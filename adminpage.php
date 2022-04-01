@@ -19,9 +19,29 @@
   <?php include("adminmenu.php") ?>
 
   <div id="title">
-		<img src="https://wallpaperaccess.com/full/4012588.jpg" class="center-block img-fluid" id="title_img" alt="Responsive image" style="height:90vh">
-		<div id="title_title">Admin ห้องประชุม</div>
-	</div>
+    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+      <ol class="carousel-indicators">
+        <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+      </ol>
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="img/1.jpg" class="center-block img-fluid" id="title_img" alt="Responsive image" style="height:100vh">
+          <div id="back_1"></div>
+        </div>
+        <div class="carousel-item">
+          <img src="img/2.jpg" class="center-block img-fluid" id="title_img" alt="Responsive image" style="height:100vh">
+          <div id="back_1"></div>
+        </div>
+        <div class="carousel-item">
+          <img src="img/3.jpg" class="center-block img-fluid" id="title_img" alt="Responsive image" style="height:100vh">
+          <div id="back_1"></div>
+        </div>
+      </div>
+    </div>
+    <div id="title_title">Admin ห้องประชุม</div>
+  </div>
 
 
 

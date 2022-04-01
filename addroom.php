@@ -17,17 +17,18 @@
 	<?php include("adminmenu.php"); ?>
 
 	<div id="title">
-		<img src="https://wallpaperaccess.com/full/4012588.jpg" class="center-block img-fluid" id="title_img" alt="Responsive image">
+		<img src="img/1.jpg" class="center-block img-fluid" id="title_img" alt="Responsive image">
+		<div id="back_2"></div>
 		<div id="title_title">เพิ่มห้องประชุม</div>
 	</div>
 
 	<div class="container">
 		<div style="height:50px;"></div>
 		<div class="well">
-			<span class="pull-left"><a href="#addnew" data-toggle="modal" class="btn btn-primary"><span class="glyphicon glyphicon-plus"></span> Add New</a></span>
+			<span class="pull-left"><a href="#addnew" data-toggle="modal" class="btn btn-info"><span class="glyphicon glyphicon-plus"></span> Add New</a></span>
 			<div style="height:50px;"></div>
 			<table class="table table-striped table-bordered table-hover">
-				<thead>
+				<thead class="thead-dark">
 					<th>ชื่อห้องประชุม</th>
 					<th>สถานที่</th>
 					<th>ความจุห้อง</th>
@@ -51,8 +52,8 @@
 							<td><?php echo $row['microphone']; ?></td>
 							<td><?php echo $row['others']; ?></td>
 							<td>
-								<a href="#edit<?php echo $row['roomid']; ?>" data-toggle="modal" class="btn btn-warning"><span class="glyphicon glyphicon-edit"></span> Edit</a> ||
-								<a href="#del<?php echo $row['roomid']; ?>" data-toggle="modal" class="btn btn-danger"><span class="glyphicon glyphicon-trash"></span> Delete</a>
+								<a href="#edit<?php echo $row['roomid']; ?>" data-toggle="modal" class="btn btn-info"><span class="glyphicon glyphicon-edit"></span> Edit</a> ||
+								<a href="#del<?php echo $row['roomid']; ?>" data-toggle="modal" class="btn btn-outline-dark"><span class="glyphicon glyphicon-trash"></span> Delete</a>
 								<?php include('roomaction.php'); ?>
 							</td>
 						</tr>

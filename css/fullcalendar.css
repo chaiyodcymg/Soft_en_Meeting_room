@@ -50,7 +50,7 @@ body .fc { /* extra precedence to overcome jqui */
 }
 
 .fc-highlight { /* when user is selecting cells */
-	background: #bce8f1;
+	background: #636363;
 	opacity: .3;
 	filter: alpha(opacity=30); /* for IE */
 }

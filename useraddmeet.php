@@ -70,7 +70,7 @@
                     }
                     ?>
 
-                    <a href="logout.php" class="btn btn-primary" role="button">ออกจากระบบ</a>
+                    <a href="logout.php" class="btn btn-info" role="button">ออกจากระบบ</a>
                 </div>
 
             </div>
@@ -78,28 +78,32 @@
     </nav>
 
     <div id="title">
-        <img src="https://wallpaperaccess.com/full/4012588.jpg" class="center-block img-fluid" id="title_img" alt="Responsive image">
+        <img src="img/1.jpg" class="center-block img-fluid" id="title_img" alt="Responsive image">
+        <div id="back_2"></div>
         <div id="title_title">จองการประชุม</div>
     </div>
     <div class="container">
         <div style="height:50px;"></div>
         <div class="well">
-            <span class="pull-left"><a href="#addnew" data-toggle="modal" class="btn btn-primary"><span class="glyphicon glyphicon-plus"></span> Add New</a></span>
+            <span class="pull-left"><a href="#addnew" data-toggle="modal" class="btn btn-info"><span class="glyphicon glyphicon-plus"></span> Add New</a></span>
             <div style="height:50px;"></div>
             <table class="table table-striped table-bordered table-hover">
-                <thead>
-                    <th>รหัสการจอง</th>
-                    <th>วาระประชุม</th>
-                    <th>ประธานการประชุม</th>
-                    <th>จำนวนผู้เข้าประชุม</th>
-                    <th>ผู้เข้าร่วมประชุม</th>
-                    <th>ห้องประชุม</th>
-                    <th>วันเวลาเริ่มประชุม</th>
-                    <th>วันเวลาสิ้นสุดการประชุม</th>
-                    <th>อุปกรณ์เพิ่มเติม</th>
-                    <th>หมายเหตุ</th>
-                    <th>ไฟล์วาระประชุม</th>
-                    <th>จัดการ</th>
+                <thead class="thead-dark">
+                    <tr>
+                        <th scope="col">รหัสการจอง</th>
+                        <th scope="col">วาระประชุม</th>
+                        <th scope="col">ประธานการประชุม</th>
+                        <th scope="col">จำนวนผู้เข้าประชุม</th>
+                        <th scope="col">ผู้เข้าร่วมประชุม</th>
+                        <th scope="col">ห้องประชุม</th>
+                        <th scope="col">วันเวลาเริ่มประชุม</th>
+                        <th scope="col">วันเวลาสิ้นสุดการประชุม</th>
+                        <th scope="col">อุปกรณ์เพิ่มเติม</th>
+                        <th scope="col">หมายเหตุ</th>
+                        <th scope="col">ไฟล์วาระประชุม</th>
+                        <th scope="col">แก้ไข</th>
+                        <th scope="col">ลบ</th>
+                    </tr>
                 </thead>
                 <tbody>
                     <?php
@@ -122,10 +126,15 @@
                             <td><?php echo $row['addequipment']; ?></td>
                             <td><?php echo $row['remark']; ?></td>
                             <td><a href="<?php echo $row['meetfile']; ?>">ดูไฟล์</a></td>
-                            <td><a href="#edit<?php echo $row['id']; ?>" data-toggle="modal" class="btn btn-warning"><span class="glyphicon glyphicon-edit"></span> Edit</a>
-                                <a href="#del<?php echo $row['id']; ?>" data-toggle="modal" class="btn btn-danger"><span class="glyphicon glyphicon-trash"></span> Delete</a>
+                            <div>
+                                <td>
+                                    <a href="#edit<?php echo $row['id']; ?>" data-toggle="modal" class="btn btn-info"><span class="glyphicon glyphicon-edit"></span> Edit</a>
+                                </td>
+                                <td>
+                                    <a href="#del<?php echo $row['id']; ?>" data-toggle="modal" class="btn btn-outline-dark"><span class="glyphicon glyphicon-trash"></span> Delete</a>
+                                </td>
                                 <?php include('meetaction.php'); ?>
-                            </td>
+                            </div>
                         </tr>
                     <?php
                     }

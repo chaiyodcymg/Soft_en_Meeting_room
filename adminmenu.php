@@ -68,7 +68,7 @@
                     }
                     ?>
 
-                    <a href="logout.php" class="btn btn-primary" role="button">ออกจากระบบ</a>
+                    <a href="logout.php" class="btn btn-info" role="button">ออกจากระบบ</a>
                 </div>
 
             </div>

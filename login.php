@@ -37,13 +37,14 @@ session_start();
 
 				</ul>
 				<div class="ml-md-2 my-lg-0">
-					<a href="login.php" class="btn btn-primary" role="button">เข้าสู่ระบบ</a>
+					<a href="login.php" class="btn btn-info" role="button">เข้าสู่ระบบ</a>
 				</div>
 			</div>
 		</div>
 	</nav>
 	<div id="title">
-		<img src="https://wallpaperaccess.com/full/4012588.jpg" class="center-block img-fluid" id="title_img" alt="Responsive image" style="height: 100vh;"> 
+		<img src="img/1.jpg" class="center-block img-fluid" id="title_img" alt="Responsive image" style="height: 100vh;"> 
+		<div id="back_1"></div>
 		<div id="title_login">
 				<div class="container h-100" id="login-page">
 				<div class="d-flex justify-content-center h-100">
@@ -75,7 +76,7 @@ session_start();
 								</div>
 								<div class="d-flex justify-content-center mt-3 login_container">
 
-									<button type="submit" name="login" class="btn btn-primary mr-4">Login</button>
+									<button type="submit" name="login" class="btn btn-info mr-4">Login</button>
 									<input class="btn btn-danger ml-4" type="reset" value="Reset">
 								</div>
 							</form>

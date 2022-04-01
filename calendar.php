@@ -26,7 +26,8 @@
 <body>
 	<?php include("adminmenu.php"); ?>
 	<div id="title">
-		<img src="https://wallpaperaccess.com/full/4012588.jpg" class="center-block img-fluid" id="title_img" alt="Responsive image">
+		<img src="img/1.jpg" class="center-block img-fluid" id="title_img" alt="Responsive image">
+		<div id="back_2"></div>
 		<div id="title_title">ห้องประชุม</div>
 	</div>
 	<div style="height:5vw"></div>
@@ -46,13 +47,11 @@
 		} else if (!empty($_POST['searchroom']) && empty($_POST['searchhead'])) {
 			$searchroom = $_POST['searchroom'];
 			$sql = "SELECT * FROM events where roomid = '$searchroom';";
-		} 
-		else  if (!empty($_POST['searchroom']) && !empty($_POST['searchhead'])) {
+		} else  if (!empty($_POST['searchroom']) && !empty($_POST['searchhead'])) {
 			$searchhead = $_POST['searchhead'];
 			$searchroom = $_POST['searchroom'];
 			$sql = "SELECT * FROM events where head = '$searchhead' AND roomid = '$searchroom'";
-		} 
-		else {
+		} else {
 			$sql = "SELECT * FROM events";
 		}
 	} else {
@@ -103,15 +102,17 @@
 						?>
 					</select>
 				</th>
-				<th><span style="font-size:20px; color:white;">
-						<center><strong>คลิ๊ก </strong></center>
-					</span> <button type="submit" class="btn btn-primary">ค้นหา</button> </th>
+				<th>
+					<br>
+					<button type="submit" class="btn btn-info">ค้นหา</button>
+				</th>
 
 			</tr>
 		</table>
+
 	</center>
 
-
+	<hr style="margin: 30px ;">
 
 	<!-- Page Content -->
 	<div class="container">
