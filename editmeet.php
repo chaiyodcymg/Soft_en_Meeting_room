@@ -23,7 +23,11 @@
 	
 	mysqli_query($conn,"update events set title=
 	'$title', head='$head', numattend='$numattend', listname='$listname', roomid='$roomid', start='$start', end='$end', addequipment='$addequipment', remark='$remark',  meetfile='$meetfilelocation' where id='$id'");
-	header('location:addmeet.php');
+	if ($_SESSION['type'] == "01") {
+		header("location:addmeet.php");
+	} else {
+		header("location:useraddmeet.php");
+	}
 
 
 
