@@ -1,5 +1,5 @@
 <?php
-
+	session_start();
 include('conn.php');
 
 
@@ -39,7 +39,12 @@ OR  start BETWEEN  '$start' AND ' $end ' OR  end BETWEEN  '$start' AND '$end' ) 
 
 if (mysqli_num_rows($result) > 0) {
 	echo "<script>alert('ห้องประชุมนี้ มีการจองในเวลานี้แล้ว')</script>";
-	echo "<script>window.open('addmeet.php','_self')</script>";
+	if ($_SESSION['type'] == "01") {
+		echo "<script>window.open('addmeet.php','_self')</script>";
+	}else{
+		echo "<script>window.open('useraddmeet.php','_self')</script>";
+	}
+
 } else {
 
 	mysqli_query($conn, "insert into events (title, head, numattend, listname, roomid, start, end, addequipment, remark, meetfile,color) values 

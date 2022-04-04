@@ -1,3 +1,15 @@
+<?php
+	session_start();
+
+	if ($_SESSION['type'] == "01") {
+		header("location:addmeet.php");
+	} else {
+		header("location:useraddmeet.php");
+	}
+
+?>
+
+
 <!doctype html>
 <html lang="en">
 

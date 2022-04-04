@@ -119,7 +119,11 @@
                             <td><?php echo $row['numattend']; ?></td>
                             <td><?php echo $row['listname']; ?></td>
 
-                            <td><?php echo $row['roomid']; ?></td>
+                           <td><?php $roomid = $row['roomid'];
+									$room = mysqli_query($conn, "SELECT roomname FROM room WHERE roomid = '$roomid'");
+									$rowroom = mysqli_fetch_array($room);
+									echo $rowroom['roomname'];
+									?></td>
 
                             <td><?php echo $row['start']; ?></td>
                             <td><?php echo $row['end']; ?></td>
